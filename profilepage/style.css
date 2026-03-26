@@ -1,0 +1,264 @@
+
+body{
+
+margin:0;
+font-family:Arial;
+background:#0d0d0d;
+color:white;
+scroll-behavior:smooth;
+
+}
+
+
+/* HERO SECTION */
+
+.hero{
+
+height:100vh;
+
+background:url("https://png.pngtree.com/background/20230416/original/pngtree-website-technology-line-dark-background-picture-image_2443641.jpg")
+center/cover no-repeat;
+
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+
+position:relative;
+
+}
+
+
+/* DARK OVERLAY */
+
+.hero::before{
+
+content:"";
+
+position:absolute;
+
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+background:rgba(0,0,0,0.6);
+
+}
+
+
+.hero-content{
+
+position:relative;
+z-index:1;
+
+}
+
+
+/* BIG WELCOME */
+
+.welcome{
+
+font-size:clamp(40px, 10vw, 120px);
+letter-spacing:clamp(2px, 1vw, 10px);
+
+color:#00ff9f;
+
+margin:0;
+
+}
+
+
+/* NAME */
+
+.name{
+
+font-size:clamp(20px, 5vw, 40px);
+margin-top:10px;
+
+}
+
+
+/* QUOTE */
+
+.quote{
+
+font-size:clamp(14px, 2.5vw, 20px);
+color:#ccc;
+
+margin-top:20px;
+
+max-width:600px;
+
+margin-left:auto;
+margin-right:auto;
+
+}
+
+
+/* BUTTON */
+
+
+
+
+
+/* GENERAL SECTION */
+
+.section{
+
+padding:clamp(60px, 10vw, 100px) 20px;
+
+text-align:center;
+
+}
+
+
+/* INFO BOXES */
+
+.info{
+
+display:flex;
+
+justify-content:center;
+
+gap:30px;
+
+flex-wrap:wrap;
+
+margin-top:40px;
+
+}
+
+.box{
+
+background:#111;
+
+padding:20px;
+width:100%;
+max-width:200px;
+
+border-radius:10px;
+
+border:1px solid #222;
+
+}
+.box:hover{
+
+transform:translateY(-10px);
+
+box-shadow:0 0 20px #35a8aa;
+
+}
+
+
+/* PROJECT CARDS */
+
+.projects{
+
+display:flex;
+
+justify-content:center;
+
+gap:30px;
+
+flex-wrap:wrap;
+
+margin-top:40px;
+
+}
+
+.card{
+
+background:#111;
+
+padding:25px;
+width:100%;
+max-width:260px;
+
+border-radius:10px;
+
+border:1px solid #222;
+
+transition:0.4s;
+
+}
+
+.card:hover{
+
+transform:translateY(-10px);
+
+box-shadow:0 0 20px #43cbed;
+
+}
+
+
+/* PARALLAX SECTION */
+
+.parallax{
+
+height:60vh;
+
+background:url("https://images.unsplash.com/photo-1555066931-4365d14bab8c")
+center/cover no-repeat;
+
+background-attachment:fixed;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+font-size:40px;
+
+}
+
+
+/* SCROLL ANIMATION */
+
+
+
+/*tablet */
+@media (max-width: 768px){
+
+.hero{
+padding:20px;
+}
+
+.quote{
+max-width:90%;
+}
+
+.parallax{
+font-size:28px;
+height:40vh;
+}
+
+}
+/*mobile */
+@media (max-width: 480px){
+
+.hero{
+height:auto;
+padding:60px 20px;
+}
+
+.welcome{
+line-height:1.1;
+}
+
+.info{
+gap:20px;
+}
+
+.projects{
+gap:20px;
+}
+
+.parallax{
+background-attachment:scroll; 
+font-size:22px;
+}
+
+}
