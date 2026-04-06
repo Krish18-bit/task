@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome - Login</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="login_style.css">
+</head>
+<body>
+    <div class="background">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+    </div>
+    <div class="container">
+        <div class="form-wrapper">
+            <div class="tabs">
+                <button class="tab-btn active" id="tabLogin" onclick="switchTab('login')">Login In</button>
+                <button class="tab-btn" id="tabSignup" onclick="switchTab('signup')">Sign Up</button>
+            </div>
+
+            <form id="loginForm" class="form-content active" onsubmit="handleLogin(event)">
+                <h2>Welcome Back</h2>
+                <div class="input-group">
+                    <label for="loginId">User ID</label>
+                    <input type="text" id="loginId" required placeholder="Enter your User ID">
+                </div>
+                <div class="input-group">
+                    <label for="loginPassword">Password</label>
+                    <input type="password" id="loginPassword" required placeholder="Enter your password">
+                </div>
+                <button type="submit" class="submit-btn login-btn">Sign In</button>
+                <p class="error-message" id="loginError"></p>
+            </form>
+
+            <form id="signupForm" class="form-content" onsubmit="handleSignup(event)">
+                <h2>Create Account</h2>
+                <div class="input-group">
+                    <label for="signupId">Enter ID</label>
+                    <input type="text" id="signupId" required placeholder="Create a User ID">
+                </div>
+                <div class="input-group">
+                    <label for="signupPassword">Password</label>
+                    <input type="password" id="signupPassword" required placeholder="Create a password">
+                </div>
+                <button type="submit" class="submit-btn signup-btn">Sign Up</button>
+                <p class="error-message" id="signupError"></p>
+                <p class="success-message" id="signupSuccess"></p>
+            </form>
+        </div>
+    </div>
+    <script src="login_script.js"></script>
+</body>
+</html>
